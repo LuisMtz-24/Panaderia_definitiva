@@ -1,0 +1,123 @@
+.auth-container {
+    max-width: 520px;
+    margin: 44px auto;
+    background: linear-gradient(180deg, rgba(0,0,0,0.02), var(--client-bg-secondary));
+    border: 1px solid var(--client-bg-tertiary);
+    border-radius: 12px;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.14);
+    overflow: hidden;
+}
+
+.auth-form {
+    padding: 34px 36px;
+}
+
+#register-form {
+    display: none;
+}
+
+body.show-register #login-form {
+    display: none;
+}
+body.show-register #register-form {
+    display: block;
+}
+
+.auth-form h2 {
+    text-align: center;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--client-text-primary);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--client-text-secondary);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--client-bg-tertiary);
+    background-color: var(--client-bg-primary);
+    color: var(--client-text-primary);
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-family: var(--client-font-family);
+    font-size: 1rem;
+    transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--client-accent-primary);
+    box-shadow: 0 0 0 6px rgba(199,161,122,0.08);
+}
+
+.auth-button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--client-accent-primary), var(--client-accent-secondary));
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+    box-shadow: 0 10px 28px rgba(160,100,60,0.12);
+}
+
+.auth-button:hover {
+    transform: translateY(-2px);
+}
+
+.auth-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.toggle-link {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 0.95rem;
+    color: var(--client-text-secondary);
+}
+
+.toggle-link span {
+    color: var(--client-accent-primary);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.toggle-link span:hover {
+    text-decoration: underline;
+}
+
+.error-text {
+    color: #e74c3c;
+    font-size: 0.95rem;
+    display: none;
+    margin-top: 10px;
+    text-align: center;
+}
+.form-group input.is-invalid,
+.form-group textarea.is-invalid {
+    border-color: #e74c3c;
+}
+.form-group input.is-invalid:focus,
+.form-group textarea.is-invalid:focus {
+    box-shadow: 0 0 0 6px rgba(231, 76, 60, 0.12);
+}

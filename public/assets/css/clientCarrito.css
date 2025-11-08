@@ -1,0 +1,190 @@
+.cart-container {
+    max-width: 980px;
+    margin: 26px auto;
+    padding: 22px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.02), transparent);
+}
+
+.cart-container h1 {
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+    color: var(--client-text-primary);
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+/* Grid adaptativo */
+.cart-grid {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 28px;
+    align-items: start;
+}
+
+@media (max-width: 880px) {
+    .cart-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Items panel */
+.cart-items {
+    background-color: var(--client-bg-secondary);
+    border: 1px solid var(--client-bg-tertiary);
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Single item */
+.cart-item {
+    display: flex;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    align-items: center;
+}
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+/* Image */
+.cart-item-image {
+    width: 88px;
+    height: 88px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid var(--client-bg-tertiary);
+    flex-shrink: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.02), transparent);
+}
+
+/* Details */
+.cart-item-details {
+    flex-grow: 1;
+    min-width: 0;
+}
+.cart-item-details h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+    color: var(--client-text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cart-item-price {
+    font-size: 0.95rem;
+    color: var(--client-text-secondary);
+    display: block;
+}
+
+/* Actions and controls */
+.cart-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.cart-item-quantity {
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 6px 10px;
+    background-color: rgba(0,0,0,0.03);
+    border-radius: 8px;
+    color: var(--client-text-primary);
+    border: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Remove button */
+.remove-item-btn {
+    background: transparent;
+    border: none;
+    color: var(--client-accent-secondary);
+    font-size: 0. nine rem;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 6px;
+    transition: color 0.18s ease, transform 0.12s ease;
+}
+.remove-item-btn:hover {
+    color: #e74c3c;
+    transform: translateY(-1px);
+}
+
+/* Summary panel */
+.cart-summary {
+    background-color: var(--client-bg-secondary);
+    border: 1px solid var(--client-bg-tertiary);
+    border-radius: 12px;
+    padding: 24px;
+    position: sticky;
+    top: 110px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* Summary header */
+.cart-summary h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 18px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    padding-bottom: 12px;
+    color: var(--client-text-primary);
+}
+
+/* Rows */
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: var(--client-text-secondary);
+}
+.summary-row.total {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--client-text-primary);
+    margin-top: 18px;
+}
+
+/* Checkout button */
+.checkout-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--client-accent-primary), var(--client-accent-secondary));
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+    box-shadow: 0 8px 18px rgba(160,100,60,0.12);
+}
+.checkout-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(160,100,60,0.18);
+}
+
+.checkout-btn:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Messages */
+#cart-empty-message,
+#checkout-success-message {
+    text-align: center;
+    font-size: 1.05rem;
+    color: var(--client-text-secondary);
+    display: none;
+    padding: 18px;
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.02);
+}

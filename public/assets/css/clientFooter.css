@@ -1,0 +1,90 @@
+.client-footer-detailed {
+    background: linear-gradient(180deg, rgba(0,0,0,0.02), var(--client-bg-secondary));
+    border-top: 1px solid rgba(255,255,255,0.03);
+    color: var(--client-text-secondary);
+    padding: 48px 5%;
+    margin-top: auto;
+    box-shadow: 0 -12px 30px rgba(0,0,0,0.10) inset;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.footer-column h4 {
+    color: var(--client-text-primary);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.2px;
+}
+
+.footer-column p,
+.footer-column a {
+    font-size: 0.95rem;
+    color: var(--client-text-secondary);
+    text-decoration: none;
+    line-height: 1.7;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.18s ease, transform 0.12s ease;
+    max-width: 42ch;
+    text-wrap: balance;
+}
+
+.footer-column a:hover {
+    color: var(--client-accent-primary);
+    text-decoration: none;
+    transform: translateX(4px);
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--client-bg-tertiary);
+    border-radius: 999px;
+    color: var(--client-text-secondary);
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.2s ease;
+    background: transparent;
+}
+
+.social-icon:hover {
+    background-color: var(--client-accent-primary);
+    border-color: var(--client-accent-primary);
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255,255,255,0.03);
+    font-size: 0.88rem;
+    color: var(--client-text-secondary);
+}
+
+/* Small screens */
+@media (max-width: 560px) {
+    .client-footer-detailed { padding: 28px 4%; }
+    .footer-column p, .footer-column a { font-size: 0.92rem; max-width: none; }
+    .footer-socials { gap: 10px; }
+}
